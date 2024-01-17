@@ -22,15 +22,17 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-password = ""
+password = []
 for i in range(0, nr_letters):
-    password += random.choice(letters)
+    password.append(random.choice(letters))
     # password += letters[random.randint(0, len(letters)-1)]
 for i in range(0, nr_numbers):
     # password += numbers[random.randint(0, len(numbers)-1)]
-    password += random.choice(numbers)
+    password.append(random.choice(numbers))
 for i in range(0, nr_symbols):
     # password += symbols[random.randint(0, len(symbols) - 1)]
-    password += random.choice(symbols)
-
-print(f" your super secure password is: {password}")
+    password.append(random.choice(symbols))
+password_output = ""
+for i in password:
+    password_output += i
+print(f" your super secure password is: {password_output}")
