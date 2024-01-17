@@ -32,6 +32,8 @@ for i in range(0, nr_numbers):
 for i in range(0, nr_symbols):
     # password += symbols[random.randint(0, len(symbols) - 1)]
     password.append(random.choice(symbols))
+
+random.shuffle(password)
 password_output = ""
 for i in password:
     password_output += i
